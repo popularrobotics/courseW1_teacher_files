@@ -35,19 +35,6 @@ def test_wheel_motors():    # test to see if wheel motors function properly
     Motor.vehicle_stop_moving_for(.2)
 
 
-def test_arm_motors():  # test to see if arm motors function properly
-    Motor.arm_motor_position(0, 10)   # 0 for Claw, 0-45 degrees
-    Motor.arm_motor_position(1, 90)   # 1 for Waist, upperarm, up or down, 90-180 degrees
-    Motor.arm_motor_position(2, 60)   # 2 for Arm Left, forearm, stretch in or out, 60-120 degrees
-    Motor.arm_motor_position(3, 20)   # 3 for Arm orientation, left or right, 10-170 degrees
-    time.sleep(1)
-    Motor.arm_motor_position(0, 40)   # 0 for Claw, 0-45 degrees
-    Motor.arm_motor_position(1, 120)  # 1 for Waist, upperarm, up or down, 90-180 degrees
-    Motor.arm_motor_position(2, 110)  # 2 for Arm Left, forearm, stretch in or out, 60-120 degrees
-    Motor.arm_motor_position(3, 80)  # 3 for Arm orientation, left or right, 10-170 degrees
-    time.sleep(1)
-
-
 def test_ultrasonic_sensors():  # test to see if the ultrasonic sensors function properly
     # Mind the GPIO mode conflict!!!
     try:
