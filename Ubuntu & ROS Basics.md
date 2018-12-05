@@ -17,6 +17,7 @@ If you haven't installed Ubuntu and ROS on your Raspberry Pi 3, please follow th
 Note:  
 - Commands in the text below are to be typed and executed in a Terminal, unless instructed otherwise.
 - Follow the steps below to create your own ROS workspace, and copy **all** files under the `src` folder provided by Popular Robotics into the `src` folder in your own workspace (see STEP **Adding New Python Scripts (nodes) into an Existing Package** below) to complete your workspace.
+- If you see `ProjectName_ws` and `package_name` anywhere in this tutorial, replace them with your own defined project name and package name, and keep them consistent throughout this course.
 
 ### Setting up ROS on a New Machine
 1. [Install ROS](http://wiki.ros.org/kinetic/Installation/Ubuntu) if it's **NOT** already installed. If you've followed the "Setting Up Your RPi Board" tutorial in this course, then ROS is already installed in your system.
@@ -25,7 +26,7 @@ Note:
     $ printenv | grep ROS
     ```
 	Add the following line to the end of the hidden .bashrc file (/home/ubuntu) if it's not already there. This file runs every time you start a new terminal (Ctrl + Shift + T)  
-	`$ source /opt/ros/kinetic/setup.bash` 
+	`source /opt/ros/kinetic/setup.bash` 
 
 [more details](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
 
@@ -37,8 +38,8 @@ Note:
     $ catkin_make
     ```
 2. Add the following line to the end of the hidden .bashrc file, and comment out the lines for other projects:  
-    `$ source /home/ubuntu(youruser)/ProjectName_ws/devel/setup.bash`
-3. To make sure your workspace is properly overlayed by the setup script, make sure ROS_PACKAGE_PATH environment variable includes the directory you're in (echo command here shows whatever is in ROS_PACKAGE_PATH):
+    `source /home/ubuntu(youruser)/ProjectName_ws/devel/setup.bash`
+3. To make sure your workspace is properly overlayed by the setup script, make sure ROS_PACKAGE_PATH environment variable includes the directory you're in (echo command here shows whatever is in ROS_PACKAGE_PATH). Start a new terminal, and type in the following command:
     ```
     $ echo $ROS_PACKAGE_PATH
     ```

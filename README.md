@@ -32,7 +32,7 @@ This tutorial shows you how to set static IP, connect your phone or laptop to th
 
 
 ## Notice
-Do not modify any files other than course_w1.py, unless instructed otherwise.  
+Do not modify any files other than **course_w1.py**, unless instructed otherwise.  
 
 ---
 
