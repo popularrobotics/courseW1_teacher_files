@@ -138,25 +138,6 @@ def python_basics():
 Congratulates! Now that you know the Python basics, go add your own functions and make the robot roll!
 
 
-## Good To Know (optional)
-
-### Code Checked at Runtime
-Python does very little checking at compile time, deferring almost all type, name, etc. checks on each line until that line runs. Suppose you defined a **repeat()** function but not **repeeeet()**, and the above **main()** calls **repeat()** like this:
-```
-def main():
-    if name == 'Guido':
-        print repeeeet(name) + '!!!'
-    else:
-        print repeat(name)
-```
-The if-statement contains an obvious error, where the repeat() function is accidentally typed in as repeeeet(). The funny thing in Python ... this code compiles and runs fine so long as the name at runtime is not 'Guido'. Only when a run actually tries to execute the repeeeet() will it notice that there is no such function and raise an error. This just means that when you first run a Python program, some of the first errors you see will be simple typos like this. This is one area where languages with a more verbose type system, like Java, have an advantage ... they can catch such errors at compile time (but of course you have to maintain all that type information ... it's a tradeoff).
-
-### Variable Names
-Since Python variables don't have any type spelled out in the source code, it's extra helpful to give meaningful names to your variables to remind yourself of what's going on. So use "name" if it's a single name, and "names" if it's a list of names, and "tuples" if it's a list of tuples. Many basic Python errors result from forgetting what type of value is in each variable, so use your variable names (all you have really) to help keep things straight.  
-As far as actual naming goes, some languages prefer underscored_parts for variable names made up of "more than one word," but other languages prefer camelCasing. In general, Python [prefers](http://python.org/dev/peps/pep-0008/#function-names) the underscore method but guides developers to defer to camelCasing if integrating into existing Python code that already uses that style. Readability counts. Read more in the section on [naming conventions](https://www.python.org/dev/peps/pep-0008/#naming-conventions) in PEP 8.  
-As you can guess, keywords like 'print' and 'while' cannot be used as variable names — you'll get a syntax error if you do. However, be careful not to use [built-ins](https://www.programiz.com/python-programming/methods/built-in/str) as variable names. For example, while 'str' and 'list' may seem like good names, you'd be overriding those system variables. Built-ins are not keywords and thus, are susceptible to inadvertent use by new Python developers. Check all built-ins [here](https://www.programiz.com/python-programming/methods/built-in/str).
-
-
 ## Reference
 - [Google's Python Class](https://developers.google.com/edu/python/)
 - [python.org](https://docs.python.org/2/)
