@@ -67,32 +67,9 @@ def python_basics():
     else:   # Otherwise, do the following
         print "False"
     # --------------------------------------
-    # Calculation with line break, '\' indicates a line break
-    total = 1 + \
-            2 + \
-            3
-    # --------------------------------------
-    # Defining a list
-    days = ['Monday', 'Tuesday', 'Wednesday',
-            'Thursday', 'Friday']
-    # --------------------------------------
-    # Defining strings
-    word = 'word'
-    sentence = "This is a sentence."
-    # Defining a string with in multiple lines
-    paragraph = """This is a paragraph.
-                It has multiple lines."""
-    # --------------------------------------
-    # Defining a variable, list, tuple or dictionary
+    # Defining a variable or list
     var = 0
     lst = [1, 2, 3, 4]
-    tuple = (1, 2, 3)
-    dict = {'one': 1, 'two': 2}
-    # --------------------------------------
-    # Below is a typical for loop
-    # range(a, b) generates a list from a to b-1 with an increment of 1
-    for i in range(1, 3):   # when i == 1 and i == 2, print i
-        print i
     # --------------------------------------
     i = 0
     # Below is a typical while loop
