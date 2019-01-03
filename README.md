@@ -1,7 +1,7 @@
 # courseW1_teacher_files
 
 ## Overview
-This repository contains all program files and tutorials for school teachers for Course W1. The `src` folder in this repo contains files that need to be put under the `/home/ubuntu/ProjectName_ws/src/package_name/src` folder once you set up a ROS workspace on your robot. Clone this repository to your robot, and follow the tutorials on robociti.com (or below) to create your own ROS workspace, and make the robot run!
+This repository contains all program files and tutorials for school teachers for Course W1. Teachers would follow the tutorials below to set up a robot ready for students to use. The `src` folder in this repo contains files that need to be put under the `/home/ubuntu/ProjectName_ws/src/package_name/src` folder once you set up a ROS workspace on your robot. Clone this repository to your robot, and follow the tutorials on robociti.com (or below) to create your own ROS workspace, and make the robot run!
 
 
 ## Walking Through The Files In The Workspace

@@ -53,16 +53,18 @@ import time
 
 def python_basics():
 
-    # This function contains basic python syntax and statements for you to refer to
+    # This function contains basic python syntax and statements
+    # for beginners to refer to.
 
-    # Below is a print command, it prints whatever string after the 'print' keyword
+    # Below is a print command, it prints whatever string after
+    # the 'print' keyword.
     print "Hello, World!"
     # Anything behind '# ' is a comment and will be ignored at runtime.
     # --------------------------------------
     # Defining a boolean, which can only be either 'True' or 'False'
     boolean = True
     # Below is an if statement
-    if boolean: # If the condition is True, do the following
+    if boolean:  # If the condition is True, do the following
         print "True"
     else:   # Otherwise, do the following
         print "False"
@@ -76,9 +78,11 @@ def python_basics():
     while i < 10:   # while condition is True, do the following
         if i == 3:
             i += 1
-            continue    # skip the rest of the commands in this iteration and start the next iteration immediately
+            continue    # skip the rest of the commands in this
+            # iteration and start the next iteration
+            # immediately.
         if i == 5:
-            break   # exit the while loop immediately
+            break   # Exit the while loop immediately.
         print i
         i += 1  # i = i + 1
     else:   # Otherwise, do the following
@@ -148,9 +152,53 @@ def student_function():
     # Motor.vehicle_move_forward(50, 0.5) means calling the 'vehicle_move_forward()' function
     # from the Motor module that was imported at the beginning of the script.
     Motor.vehicle_stop_moving_for(0)  # argument: duration (seconds)
+    # To do the challenge in this course, complete the autonomous_driving() function defined below
+    # and call that function here.
+    autonomous_driving()
     pass    # If you haven't written any valid commands in a function, put 'pass' as a placeholder
     # Now unleash your creativity and write more code below ;)
     #
+
+
+def autonomous_driving():
+    # This function is for the autonomous driving/obstacle avoidance challenge (session 4).
+    # You could start working on it during session 3 after you've read through this script
+    # and have a grasp of the Python basics, as well as some pre-defined functions you could use
+    # to help you complete the task.
+    # Tips below is to help you complete the function, use all that you've learned in this course,
+    # and feel free to refer to online resources or ask instructors for help (if you're
+    # taking this course at school)
+    #
+    # Below are some tips and pre-written code, but you could always replace them with your own ideas.
+    #
+    # Activate the ultrasonic sensors by reading distances
+    just_to_activate_the_sensor = Ultrasonic.read_distance(0)
+    print 'Front', just_to_activate_the_sensor, 'cm'
+    # Do the same thing for sensor 1 and 2
+    #
+    while True:
+        time.sleep(0.1)  # Let the sensors cool down a bit
+        # Fill in some code here to read distances from all 3 sensors,
+        # which tells the robot how far is it from obstacles in 3 directions
+        # for example
+        front_distance = Ultrasonic.read_distance(0)
+        #
+        # Below design how the robot would behave if it encounters an obstacle in any direction
+        # for example
+        if front_distance < 10:
+            Motor.vehicle_stop_moving_for(0)
+            # Fill in some other code here to make the robot move
+            # (e.g. go backwards, turn left, or turn right)
+            pass
+        #
+        # Fill in more code here and tell the robot what to do when it encounters obstacles
+        # on its left or right side.
+        #
+        # Would there be a situation where it needs to 'break' the while loop
+        # or 'continue' to the next iteration?
+        #
+        # You could print out some statements on the screen to help you debug the program
+        #
 
 # ***** student edits end *****
 
